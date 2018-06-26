@@ -123,6 +123,9 @@ public class Test extends javax.swing.JFrame {
                 .addComponent(PubTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(178, Short.MAX_VALUE))
         );
+        
+        javax.swing.text.DefaultCaret caret = (javax.swing.text.DefaultCaret)SubOutput.getCaret();
+        caret.setUpdatePolicy(javax.swing.text.DefaultCaret.ALWAYS_UPDATE);
 
         pack();
     }
@@ -193,9 +196,16 @@ public class Test extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> SubComboBox;
     private javax.swing.JTextArea SubOutput;
     private javax.swing.JScrollPane jScrollPane1;
+    private int message_count = 0;
+    private final int MAX_MESSAGE_COUNT = 25;
     // End of variables declaration//GEN-END:variables
     
     public void SubOutputWrite(String text) {
+    	if (message_count == MAX_MESSAGE_COUNT) {
+    		SubOutputClear();
+    		message_count = 0;
+    	}
+    	message_count++;
     	SubOutput.setText(SubOutput.getText() + '\n' + text);
     }
     
