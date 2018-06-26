@@ -64,7 +64,8 @@ public class Test extends javax.swing.JFrame {
             }
         });
 
-        SubComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "/esp/temp", "/esp/smoke", "/esp/daymsgs" }));
+        SubComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "/esp/temp", "/esp/smoke",
+        		"/esp/daymsgs", "/vou/meformar" }));
 
         SubOutput.setColumns(20);
         SubOutput.setRows(5);
