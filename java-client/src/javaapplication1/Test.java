@@ -47,7 +47,8 @@ public class Test extends javax.swing.JFrame {
         PubButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
+        
+        SubButton.setFont(new java.awt.Font("Cantarell", 0, 25));
         SubButton.setText("Sub");
         SubButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -56,36 +57,44 @@ public class Test extends javax.swing.JFrame {
         });
 
         ServerLabel.setText("Server");
+        ServerLabel.setFont(new java.awt.Font("Cantarell", 0, 25));
 
         ServerTextField.setText("tcp://206.189.191.14");
+        ServerTextField.setFont(new java.awt.Font("Cantarell", 0, 25));
         ServerTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ServerTextFieldActionPerformed(evt);
             }
         });
 
+        SubComboBox.setFont(new java.awt.Font("Cantarell", 0, 25));
         SubComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "/esp/temp", "/esp/smoke",
         		"/esp/daymsgs", "/vou/meformar" }));
 
-        SubOutput.setColumns(20);
+        SubOutput.setFont(new java.awt.Font("Cantarell", 0, 25));
+        SubOutput.setColumns(12);
         SubOutput.setRows(5);
         jScrollPane1.setViewportView(SubOutput);
 
+        PubComboBox.setFont(new java.awt.Font("Cantarell", 0, 25));
         PubComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "/esp/daymsgr" }));
 
+        PubButton.setFont(new java.awt.Font("Cantarell", 0, 25));
         PubButton.setText("Pub");
         PubButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 PubButtonMouseClicked(evt);
             }
         });
+        
+        PubTextField.setFont(new java.awt.Font("Cantarell", 0, 25));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(150, 150, 150)
+                .addGap(75, 75, 75)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(PubButton)
@@ -99,9 +108,9 @@ public class Test extends javax.swing.JFrame {
                             .addComponent(SubButton))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(ServerTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE)
+                            .addComponent(ServerTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
                             .addComponent(SubComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addGap(102, 102, 102))
+                .addGap(75, 75, 75))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -122,7 +131,7 @@ public class Test extends javax.swing.JFrame {
                     .addComponent(PubButton))
                 .addGap(18, 18, 18)
                 .addComponent(PubTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(178, Short.MAX_VALUE))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
         
         javax.swing.text.DefaultCaret caret = (javax.swing.text.DefaultCaret)SubOutput.getCaret();
